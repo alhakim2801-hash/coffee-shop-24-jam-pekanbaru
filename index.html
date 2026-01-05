@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<!-- HERO (LANGSUNG TAMPIL) -->
-<section class="hero">
+<!-- HERO -->
+<section class="hero reveal">
     <div class="hero-left">
         <h1>Coffee Shop 24 Jam<br>Di Pekanbaru</h1>
     </div>
@@ -22,15 +22,15 @@
     </div>
 </section>
 
-<!-- SECTION -->
 <section class="section section-dark reveal">
     <div class="content">
         <div class="text">
             <h2>1. Bhadrika</h2>
-            <p>Coffee shop 24 jam dengan suasana nyaman.</p>
+            <p>Bhadrika adalah coffee shop 24 jam di Pekanbaru yang menghadirkan ruang nyaman untuk semua momen.
+Mulai dari bekerja, belajar, nongkrong, hingga sekadar menikmati secangkir kopi di tengah malam.</p>
             <p>☕ Coffee · 📶 WiFi · 🔌 Stop Kontak · 🕛 24 Jam</p>
             <p><strong>Alamat:</strong> Pekanbaru, Riau</p>
-            <a href="https://maps.app.goo.gl/xxxx" target="_blank" class="maps-btn">📍 Lihat Lokasi</a>
+            <a href="https://maps.app.goo.gl/mXUt52XeFntJ3jAK9"_blank" class="maps-btn">📍 Lihat Lokasi</a>
         </div>
         <img src="img/bhadrika.jpg">
     </div>
@@ -41,10 +41,10 @@
         <img src="img/tanakala.jpg">
         <div class="text">
             <h2>2. Tanakala</h2>
-            <p>Tempat nongkrong 24 jam dengan kopi pilihan.</p>
+            <p>Tanakala  hadir sebagai coffee shop 24 jam di Pekanbaru yang terbuka kapan saja. Dengan tempat yang nyaman dan pilihan menu kopi yang beragam, Tanakala menjadi tempat yang pas untuk nongkrong, kerja, atau sekadar menikmati waktu luang.</p>
             <p>☕ Coffee · 📶 WiFi · 🔌 Stop Kontak · 🕛 24 Jam</p>
             <p><strong>Alamat:</strong> Pekanbaru, Riau</p>
-            <a href="https://maps.app.goo.gl/xxxx" target="_blank" class="maps-btn">📍 Lihat Lokasi</a>
+            <a href="https://maps.app.goo.gl/zRBpXKZyot3eTsVW8" target="_blank" class="maps-btn">📍 Lihat Lokasi</a>
         </div>
     </div>
 </section>
@@ -53,10 +53,10 @@
     <div class="content">
         <div class="text">
             <h2>3. Kedai Mak Uwo</h2>
-            <p>Hidangan rumahan dengan rasa hangat.</p>
+            <p>Di Kedai Mak Uwo, pengunjung dapat menikmati hidangan rumahan dengan rasa yang sederhana dan hangat. Menu yang disajikan cocok untuk menemani waktu istirahat, makan bersama, maupun santapan sehari-hari.</p>
             <p>🍽️ Makanan Rumahan · 🕛 24 Jam</p>
             <p><strong>Alamat:</strong> Pekanbaru, Riau</p>
-            <a href="https://maps.app.goo.gl/xxxx" target="_blank" class="maps-btn">📍 Lihat Lokasi</a>
+            <a href="https://maps.app.goo.gl/zG5Krufh2zU7uj4k9" target="_blank" class="maps-btn">📍 Lihat Lokasi</a>
         </div>
         <img src="img/makuwo.jpg">
     </div>
@@ -67,27 +67,31 @@
         <img src="img/patty.jpg">
         <div class="text">
             <h2>4. Patty & Presso</h2>
-            <p>Burger dan kopi pilihan.</p>
+            <p>Patty & Presso adalah cafe yang menggabungkan sajian burger dengan kopi pilihan. Menghadirkan menu yang praktis dan mengenyangkan, tempat ini cocok untuk pengunjung yang ingin menikmati makanan cepat saji dengan kualitas rasa yang tetap terjaga.
+</p>
             <p>🍔 Burger · ☕ Coffee · 🕛 24 Jam</p>
             <p><strong>Alamat:</strong> Pekanbaru, Riau</p>
-            <a href="https://maps.app.goo.gl/xxxx" target="_blank" class="maps-btn">📍 Lihat Lokasi</a>
+            <a href="
+https://maps.app.goo.gl/AFiHQDxRDSVZYUUq5" target="_blank" class="maps-btn">📍 Lihat Lokasi</a>
         </div>
     </div>
 </section>
 
 <footer>
     <p>© 2026 Coffee Shop 24 Jam Pekanbaru</p>
-    <p>Dibuat oleh: Al Hakim Januario Barens</p>
+    <p>Dibuat oleh: Al Hakim Januario Barens,Meidy Victoria, Abel Yunita Pratiwi,Muhammad Faiq Fadhil, Syakila Putri Syahda
+</p>
 </footer>
 
 <script>
 const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
-    reveals.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-            el.classList.add("active");
+    reveals.forEach(reveal => {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveal.getBoundingClientRect().top;
+        if (revealTop < windowHeight - 100) {
+            reveal.classList.add("active");
         }
     });
 });
