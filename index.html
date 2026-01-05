@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero reveal">
+<!-- HERO (LANGSUNG TAMPIL) -->
+<section class="hero">
     <div class="hero-left">
         <h1>Coffee Shop 24 Jam<br>Di Pekanbaru</h1>
     </div>
@@ -22,11 +22,12 @@
     </div>
 </section>
 
+<!-- SECTION -->
 <section class="section section-dark reveal">
     <div class="content">
         <div class="text">
             <h2>1. Bhadrika</h2>
-            <p>Coffee shop 24 jam dengan suasana nyaman untuk semua momen.</p>
+            <p>Coffee shop 24 jam dengan suasana nyaman.</p>
             <p>☕ Coffee · 📶 WiFi · 🔌 Stop Kontak · 🕛 24 Jam</p>
             <p><strong>Alamat:</strong> Pekanbaru, Riau</p>
             <a href="https://maps.app.goo.gl/xxxx" target="_blank" class="maps-btn">📍 Lihat Lokasi</a>
@@ -40,7 +41,7 @@
         <img src="img/tanakala.jpg">
         <div class="text">
             <h2>2. Tanakala</h2>
-            <p>Tempat nongkrong 24 jam dengan kopi dan suasana nyaman.</p>
+            <p>Tempat nongkrong 24 jam dengan kopi pilihan.</p>
             <p>☕ Coffee · 📶 WiFi · 🔌 Stop Kontak · 🕛 24 Jam</p>
             <p><strong>Alamat:</strong> Pekanbaru, Riau</p>
             <a href="https://maps.app.goo.gl/xxxx" target="_blank" class="maps-btn">📍 Lihat Lokasi</a>
@@ -52,7 +53,7 @@
     <div class="content">
         <div class="text">
             <h2>3. Kedai Mak Uwo</h2>
-            <p>Hidangan rumahan dengan rasa hangat dan sederhana.</p>
+            <p>Hidangan rumahan dengan rasa hangat.</p>
             <p>🍽️ Makanan Rumahan · 🕛 24 Jam</p>
             <p><strong>Alamat:</strong> Pekanbaru, Riau</p>
             <a href="https://maps.app.goo.gl/xxxx" target="_blank" class="maps-btn">📍 Lihat Lokasi</a>
@@ -66,7 +67,7 @@
         <img src="img/patty.jpg">
         <div class="text">
             <h2>4. Patty & Presso</h2>
-            <p>Burger lezat dipadukan dengan kopi pilihan.</p>
+            <p>Burger dan kopi pilihan.</p>
             <p>🍔 Burger · ☕ Coffee · 🕛 24 Jam</p>
             <p><strong>Alamat:</strong> Pekanbaru, Riau</p>
             <a href="https://maps.app.goo.gl/xxxx" target="_blank" class="maps-btn">📍 Lihat Lokasi</a>
@@ -76,18 +77,17 @@
 
 <footer>
     <p>© 2026 Coffee Shop 24 Jam Pekanbaru</p>
-    <p>Dibuat oleh: Al Hakim Januario Barens,Meidy Victoria, Abel Yunita Pratiwi, Muhammad Faiq Fadhil, Syakila putri syahda</p>
+    <p>Dibuat oleh: Al Hakim Januario Barens</p>
 </footer>
 
 <script>
 const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
-    reveals.forEach(reveal => {
-        const windowHeight = window.innerHeight;
-        const revealTop = reveal.getBoundingClientRect().top;
-        if (revealTop < windowHeight - 100) {
-            reveal.classList.add("active");
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add("active");
         }
     });
 });
