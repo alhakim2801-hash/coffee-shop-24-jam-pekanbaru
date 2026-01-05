@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    padding: 40px;
+    background: #7a1414;
+}
+
+.hero-left {
+    flex: 1;
+    color: #f5d58d;
+    display: flex;
+    align-items: center;
+}
+
+.hero-left h1 {
+    font-size: 48px;
+}
+
+.hero-right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.hero-right img:hover {
+    transform: scale(1.08);
+}
+
+/* SECTION */
+.section {
+    padding: 60px;
+}
+
+.section-dark {
+    background: #1f3447;
+    color: #f5d58d;
+}
+
+.section-yellow {
+    background: #f2c230;
+    color: #1f3447;
+}
+
+.section-brown {
+    background: #6b3b2a;
+    color: #f5d58d;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.content.reverse {
+    flex-direction: row-reverse;
+}
+
+.text h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.text p {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.content img {
+    width: 320px;
+    height: 220px;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.content img:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* BUTTON */
+.maps-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: #f5d58d;
+    color: #1f3447;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.maps-btn:hover {
+    transform: scale(1.1);
+}
+
+.section-yellow .maps-btn {
+    background: #1f3447;
+    color: #f2c230;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero, .content, .content.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left h1 {
+        font-size: 32px;
+    }
+
+    .hero-right {
+        grid-template-columns: 1fr;
+    }
+
+    .content img {
+        width: 100%;
+        height: auto;
+    }
+}
